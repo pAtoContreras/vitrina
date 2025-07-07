@@ -24,8 +24,16 @@ const connection = mysql.createConnection({
   port: process.env.DB_PORT || 3306
 });
 
-db.connect((err) => {
-  if (err) throw err;
+// db.connect((err) => {
+//   if (err) throw err;
+//   console.log('Conectado a MySQL');
+// });
+
+connection.connect((err) => {
+  if (err) {
+    console.error('Error al conectar a MySQL:', err);
+    return;
+  }
   console.log('Conectado a MySQL');
 });
 
