@@ -1,0 +1,30 @@
+<div class="container-fluid py-5 " [ngClass]="bgClass">
+  
+<div class="team-title section-title">
+  <h2 class="mb-4 text-light text-uppercase">Contacto</h2>
+</div>
+  <form (ngSubmit)="enviarContacto()" #form="ngForm">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <input type="text" name="nombre" [(ngModel)]="contacto.nombre" required class="form-control" placeholder="Nombre">
+      </div>
+      <div class="col-md-6">
+        <input type="text" name="apellido" [(ngModel)]="contacto.apellido" required class="form-control" placeholder="Apellido">
+      </div>
+      <div class="col-md-6">
+        <input type="tel" name="telefono" [(ngModel)]="contacto.telefono" class="form-control" placeholder="Teléfono">
+      </div>
+      <div class="col-md-6">
+        <input type="email" name="email" [(ngModel)]="contacto.email" required class="form-control" placeholder="Email">
+      </div>
+      <div class="col-12">
+        <textarea name="comentario" [(ngModel)]="contacto.comentario" class="form-control" rows="4" placeholder="Comentario"></textarea>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-light border text-primary fw-bold mt-4" [disabled]="form.invalid">Enviar</button>
+
+    <div *ngIf="enviado" class="alert alert-success mt-3">¡Gracias por contactarnos!</div>
+    <div *ngIf="error" class="alert alert-danger mt-3">{{ error }}</div>
+  </form>
+</div>

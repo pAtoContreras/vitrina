@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm py-3" [class]="headerClass">
+  <div class="container-fluid">
+    <!-- Logo o Marca -->
+    <a class="navbar-brand fw-bold text-uppercase" routerLink="/">MiEmpresa</a>
+
+    <!-- Botón colapsable para móviles -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarResponsive"
+      aria-controls="navbarResponsive"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Contenido colapsable -->
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto text-center">
+        <li class="nav-item">
+          <a routerLink="/home" routerLinkActive="active" class="nav-link text-light">Home</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/modelos" routerLinkActive="active" class="nav-link text-light">Modelos</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/trabajos" routerLinkActive="active" class="nav-link text-light">Trabajos</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/presupuesto" routerLinkActive="active" class="nav-link text-light">Presupuesto</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/contacto" routerLinkActive="active" class="nav-link text-light">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

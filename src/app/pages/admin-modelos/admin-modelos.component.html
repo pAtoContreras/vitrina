@@ -1,0 +1,56 @@
+<div class="container py-4">
+  <!-- <h2>Panel de administración de modelos</h2> -->
+  <form #modeloFormRef="ngForm" (ngSubmit)="saveModelo()" class="mb-4 shadow p-5" novalidate>
+    <h4 class="text-muted p-3 fst-italic">
+      {{ editing ? 'Editar Modelo' : 'Agregar nuevo Modelo' }}
+    </h4>
+
+    <input type="text" [(ngModel)]="modeloForm.nombre" name="nombre" placeholder="Nombre" required
+      class="form-control mb-2" #nombre="ngModel" />
+    <div *ngIf="nombre.invalid && nombre.touched" class="text-danger mb-2">
+      El nombre es obligatorio.
+    </div>
+
+    <textarea [(ngModel)]="modeloForm.descripcion" name="descripcion" placeholder="Descripción" required
+      class="form-control mb-2" #descripcion="ngModel"></textarea>
+    <div *ngIf="descripcion.invalid && descripcion.touched" class="text-danger mb-2">
+      La descripción es obligatoria.
+    </div>
+
+    <input type="text" [(ngModel)]="modeloForm.imagen" name="imagen" placeholder="URL Imagen" required
+      class="form-control mb-2" #imagen="ngModel" />
+    <div *ngIf="imagen.invalid && imagen.touched" class="text-danger mb-2">
+      La URL de la imagen es obligatoria.
+    </div>
+
+    <button disabled type="submit" class="mt-4 border btn" [ngClass]="editing ? 'btn-success' : 'btn-primary'"
+      [disabled]="modeloFormRef.invalid">
+      {{ editing ? 'Actualizar Modelo' : 'Agregar Modelo' }}
+    </button>
+
+    <button type="button" (click)="resetForm()" class="btn btn-info mt-4 text-light " *ngIf="editing">
+      Cancelar
+    </button>
+  </form>
+
+  <div class="row">
+    <div class="col-md-4" *ngFor="let modelo of modelos">
+      <div class="card mb-3 shadow">
+        <img [src]="modelo.imagen" alt="{{ modelo.nombre }}" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">{{ modelo.nombre }}</h5>
+          <p class="card-text">{{ modelo.descripcion }}</p>
+          <div class="d-flex justify-content-between">
+            <button class="btn btn-sm btn-light border me-2" (click)="editModelo(modelo)">
+              <i class="fas fa-edit text-dark"></i> Editar
+            </button>
+            <button class="btn btn-sm btn-danger" (click)="deleteModelo(modelo.id)">
+              <i class="fas fa-trash-alt"></i> Eliminar
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

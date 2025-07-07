@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+/* Sobrescribimos los colores primarios de Bootstrap */
+.text-primary {
+  color: #073868 !important;
+}
+
+.bg-primary {
+  background-color: #073868 !important;
+}
+
+.text-secondary {
+  color: #91450c !important;
+}
+
+.bg-secondary {
+  background-color: #91450c !important;
+}

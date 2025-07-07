@@ -1,0 +1,10 @@
+.section-title h2 {
+  color: #073868;
+  
+  font-size: 35px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 5px;
+  line-height: 1.5;
+}

@@ -1,0 +1,51 @@
+<div class="container py-5">
+    <div class="team-title section-title">
+
+  <h2 class="text-primary text-uppercase mb-4 text-center">Solicitá tu Presupuesto</h2>
+    </div>
+    <div 
+  class="alert alert-success mt-3 text-center" 
+  *ngIf="mensajeExito"
+>
+  ¡Tu solicitud de presupuesto fue enviada con éxito!
+</div>
+
+  <form (ngSubmit)="enviarPresupuesto()" #form="ngForm" class="shadow p-4 rounded bg-light">
+
+    <div class="row g-3">
+      <div class="col-md-6">
+        <input type="text" class="form-control" name="nombre" [(ngModel)]="presupuesto.nombre" placeholder="Nombre" required>
+      </div>
+
+      <div class="col-md-6">
+        <input type="text" class="form-control" name="apellido" [(ngModel)]="presupuesto.apellido" placeholder="Apellido" required>
+      </div>
+
+      <div class="col-md-6">
+        <input type="tel" class="form-control" name="telefono" [(ngModel)]="presupuesto.telefono" placeholder="Teléfono" required>
+      </div>
+
+      <div class="col-md-6">
+        <input type="email" class="form-control" name="email" [(ngModel)]="presupuesto.email" placeholder="Email" required>
+      </div>
+
+      <div class="col-md-12">
+        <select class="form-select" name="servicio" [(ngModel)]="presupuesto.servicio" required>
+          <option value="" disabled selected>Seleccioná un servicio</option>
+          <option value="instalacion">Instalación de Piscina</option>
+          <option value="mantenimiento">Mantenimiento</option>
+          <option value="reparacion">Reparación</option>
+          <option value="otro">Otro</option>
+        </select>
+      </div>
+
+      <div class="col-md-12">
+        <textarea class="form-control" name="detalles" [(ngModel)]="presupuesto.detalles" placeholder="Contanos más sobre el proyecto (medidas, ubicación, etc.)" rows="4" required></textarea>
+      </div>
+    </div>
+
+    <div class="text-end mt-4">
+      <button class="btn btn-primary px-4" type="submit">Enviar Presupuesto</button>
+    </div>
+  </form>
+</div>

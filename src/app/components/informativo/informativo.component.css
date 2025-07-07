@@ -1,0 +1,13 @@
+.section-title {
+  font-size: 35px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #0152a3;
+}
+
+p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}

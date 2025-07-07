@@ -1,0 +1,20 @@
+<div class="container py-4 text-center bg-light">
+<div class="team-title section-title">
+  <h2>Nuestros Modelos</h2>
+</div>
+  <div class="carousel-container">
+    <div class="cards-wrapper">
+      <div class="card-item" *ngFor="let modelo of modelos; let i = index" [class.center-card]="i === centerIndex"
+        [class.hovered]="hoverIndex === i"
+        [class.hover-disabled]="i === centerIndex && hoverIndex !== null && hoverIndex !== centerIndex"
+        (mouseenter)="hoverIndex = i" (mouseleave)="hoverIndex = null">
+        <img [src]="modelo.imagen" class="card-img-top rounded-top-4" alt="{{ modelo.nombre }}"
+          style="height: 200px; object-fit: cover;" />
+        <div class="card-body">
+          <h5 class="card-title fw-semibold text-primary">{{ modelo.nombre }}</h5>
+          <p class="card-text text-muted">{{ modelo.descripcion }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

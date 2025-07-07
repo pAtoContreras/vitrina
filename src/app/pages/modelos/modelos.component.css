@@ -1,0 +1,70 @@
+.carousel-container {
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  padding-top: 3rem; /* agrega espacio arriba para la sombra */
+  -webkit-overflow-scrolling: touch;
+}
+.cards-wrapper {
+  display: flex;
+  gap: 1rem;
+  scroll-behavior: smooth;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 2rem; /* espacio para que la sombra no se corte */
+}
+
+.card-item {
+  flex: 0 0 30%; /* 3 cards visibles */
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(50, 155, 220, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  border: none;
+}
+
+/* Card central: subida y sombra más marcada */
+.center-card {
+  transform: translateY(-20px) scale(1.1);
+  box-shadow: 0 12px 30px rgba(26, 127, 190, 0.493);
+  z-index: 2;
+}
+
+/* Cuando hay hover en otra card, se quita sombra y subida central */
+.center-card.hover-disabled {
+  transform: none;
+  box-shadow: 0 2px 6px rgba(50, 155, 220, 0.15);
+  z-index: 1;
+}
+
+/* Hover sobre otra card, que no sea la central: más subida y sombra */
+.hovered:not(.center-card) {
+  transform: translateY(-25px) scale(1.15);
+  box-shadow: 0 12px 30px rgba(26, 127, 190, 0.492);
+  z-index: 3;
+}
+
+/* Ajuste de texto para la card-body (más linda y más chica) */
+.card-body {
+  font-family: 'Lato', sans-serif; /* O la que prefieras */
+  font-size: 0.7rem;
+  color: #444;
+}
+
+.team-title .section-title h2 {
+  color: #073868;
+  margin-bottom: 20px;
+}
+
+.section-title h2 {
+  color: #073868;
+  
+  font-size: 35px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
