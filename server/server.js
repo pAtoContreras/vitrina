@@ -9,31 +9,15 @@ app.use(cors());
 app.use(express.json());
 
 // Conexión MySQL
-// const db = mysql.createConnection({
-//   host: 'localhost',
-//   user: 'root',
-//   password: '',
-//   database: 'vitrina_db'
-// });
-
-const connection = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME,
-  port: process.env.DB_PORT || 3306
+const db = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: '',
+  database: 'vitrina_db'
 });
 
-// db.connect((err) => {
-//   if (err) throw err;
-//   console.log('Conectado a MySQL');
-// });
-
-connection.connect((err) => {
-  if (err) {
-    console.error('Error al conectar a MySQL:', err);
-    return;
-  }
+db.connect((err) => {
+  if (err) throw err;
   console.log('Conectado a MySQL');
 });
 

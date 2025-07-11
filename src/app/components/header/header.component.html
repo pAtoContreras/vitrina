@@ -1,7 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-dark shadow-sm py-3" [class]="headerClass">
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm py-3"  [class]="headerClass" [ngClass]="{ 'hidden-navbar': isScrolling }">
   <div class="container-fluid">
     <!-- Logo o Marca -->
-    <a class="navbar-brand fw-bold text-uppercase" routerLink="/">MiEmpresa</a>
+    <a class="navbar-brand fw-bold text-uppercase" routerLink="/"><img src="https://media.bio.site/sites/E2B6C368-F4CA-49F6-9693-2E1BADC0FD90/NRRwHsbXrx5sJid7z4Qmo5.png" alt="Logo" class="rounded-circle" width="40" height="40">
+</a>
 
     <!-- Botón colapsable para móviles -->
     <button
@@ -20,19 +21,19 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ms-auto text-center">
         <li class="nav-item">
-          <a routerLink="/home" routerLinkActive="active" class="nav-link text-light">Home</a>
+          <a routerLink="/home" routerLinkActive="active" class="nav-link text-light"><i class="fa fa-home"></i></a>
         </li>
         <li class="nav-item">
-          <a routerLink="/modelos" routerLinkActive="active" class="nav-link text-light">Modelos</a>
+          <a routerLink="/modelos" routerLinkActive="active" class="nav-link text-light">MODELOS</a>
         </li>
         <li class="nav-item">
-          <a routerLink="/trabajos" routerLinkActive="active" class="nav-link text-light">Trabajos</a>
+          <a routerLink="/trabajos" routerLinkActive="active" class="nav-link text-light">TRABAJOS</a>
         </li>
         <li class="nav-item">
-          <a routerLink="/presupuesto" routerLinkActive="active" class="nav-link text-light">Presupuesto</a>
+          <a routerLink="/presupuesto" routerLinkActive="active" class="nav-link text-light">PRESUPUESTO</a>
         </li>
         <li class="nav-item">
-          <a routerLink="/contacto" routerLinkActive="active" class="nav-link text-light">Contacto</a>
+          <a routerLink="/contacto" routerLinkActive="active" class="nav-link text-light">CONTACTO</a>
         </li>
       </ul>
     </div>

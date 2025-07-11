@@ -5,8 +5,13 @@ body {
 }
 .section-title {
   font-size: 35px;
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
+  /* font-family: "Oswald", sans-serif;
+  text-transform: uppercase; */
+  
+  font-family: "Playfair Display", serif !important;
+  font-size: 17px;
+  letter-spacing: 1px;
+
   font-weight: 500;
   margin-bottom: 20px;
   color: #0152a3;
@@ -16,8 +21,11 @@ body {
   color: #073868;
   
   font-size: 35px;
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
+  /* font-family: "Oswald", sans-serif;
+  text-transform: uppercase; */
+    font-family: "Playfair Display", serif!important;
+  /* font-size: 17px; */
+  letter-spacing: 1px;
   font-weight: 500;
   margin-top: 5px;
   line-height: 1.5;

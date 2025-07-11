@@ -13,4 +13,21 @@ import { PresupuestoComponent } from "../presupuesto/presupuesto.component";
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {}
+export class HomeComponent {
+
+ particles: any[] = [];
+
+  ngOnInit() {
+    this.generateParticles(60); // cantidad
+  }
+
+  generateParticles(count: number) {
+    for (let i = 0; i < count; i++) {
+      this.particles.push({
+        left: Math.random() * window.innerWidth,
+        delay: Math.random() * 10,
+        duration: 10 + Math.random() * 10
+      });
+    }
+  }
+}

@@ -1,10 +1,27 @@
-.section-title h2 {
-  color: #073868;
-  
+.section-title {
   font-size: 35px;
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  font-weight: 500;
+  /* font-family: "Oswald", sans-serif;
+  text-transform: uppercase; */
+  
+  font-family: "Playfair Display", serif !important;
+  font-size: 17px;
+  letter-spacing: 1px;
+
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #0152a3;
+}
+
+.section-title h2 {
+
+  color: #073868;
+    font-weight: bold;
+  font-size: 35px;
+  /* font-family: "Oswald", sans-serif;
+  text-transform: uppercase; */
+    font-family: "Playfair Display", serif!important;
+  /* font-size: 17px; */
+  letter-spacing: 1px;
   margin-top: 5px;
   line-height: 1.5;
 }

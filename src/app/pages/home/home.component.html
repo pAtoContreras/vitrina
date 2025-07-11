@@ -1,6 +1,42 @@
-<div class="container mt-4 text-center">
-  <h1 class="mb-4 text-muted p-3 fst-italic">¡Bienvenido a !</h1>
-  <app-carousel></app-carousel>
+<div class="">
+  <a
+  href="https://wa.me/543514234567"  
+  class="whatsapp-float"
+  target="_blank"
+  rel="noopener"
+>
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+  <!-- <h1 class="mb-4 text-muted p-3 fst-italic">¡Bienvenido a !</h1> -->
+<div class="hero-container">
+  <img
+    src="https://img.freepik.com/photos-gratuite/style-vie-inspiration-logo-vacances-ciel-clair_1134-785.jpg"
+    alt="Fondo"
+    class="background-img"
+  />
+
+  <!-- Partículas -->
+  <div class="particles" id="particles">
+    <div
+      *ngFor="let p of particles"
+      class="particle"
+      [ngStyle]="{
+        left: p.left + 'px',
+        animationDelay: p.delay + 's',
+        animationDuration: p.duration + 's'
+      }"
+    ></div>
+  </div>
+
+  <!-- Título y subtítulo con animaciones -->
+  <h1 class="titulo fade-in-title">Arizona Piscinas</h1>
+  <p class="subtitle fade-in-subtitle">
+    Piscinas de Fibra de Vidrio en Córdoba y alrededores
+  </p>
+</div>
+
+  <!-- <app-carousel></app-carousel> -->
   <app-informativo></app-informativo>
   <app-modelos></app-modelos>
   <app-trabajos></app-trabajos>
